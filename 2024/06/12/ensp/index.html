@@ -133,11 +133,11 @@
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>使用  <strong>终端（管理员）</strong> 运行 <code>bcdedit</code> 命令，可以看到是未关闭 <code>Hyper-V</code> </p>
 <p><img src="https://raw.gitmirror.com/mrz0668/blogpic/main/img/202406120019267.png"></p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p><strong>终端（管理员）</strong> 执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /<span class="built_in">set</span> hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
 
 <p>  然后重启，再次尝试启动 <code>AR_Base</code> 即可</p>
 <p>  若想启动 <code>Hyper-V</code> ，则用 <strong>终端（管理员）</strong> 执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /<span class="built_in">set</span> hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
 
 <h1 id="网卡未正确安装或网卡名称不对导致Virtual-Box虚拟机无法启动"><a href="#网卡未正确安装或网卡名称不对导致Virtual-Box虚拟机无法启动" class="headerlink" title="网卡未正确安装或网卡名称不对导致Virtual Box虚拟机无法启动"></a>网卡未正确安装或网卡名称不对导致Virtual Box虚拟机无法启动</h1><h2 id="现象："><a href="#现象：" class="headerlink" title="现象："></a>现象：</h2><p>打开 <code>Oracle VM VirtualBox</code>，启动 <code>AR_Base</code><br>出现以下报错：</p>
 <p><img src="https://raw.gitmirror.com/mrz0668/blogpic/main/img/202406120019920.png"></p>
